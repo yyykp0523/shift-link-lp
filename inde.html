@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Shift Linkは、LINEで簡単にシフト管理ができるコストパフォーマンスの高いシフト管理ツールです。小規模ビジネスやチームに最適な、シンプルで手軽なシフト管理を実現します。"
+    />
+    <meta
+      name="keywords"
+      content="シフト管理, LINEシフト管理, シンプルシフト管理, コストパフォーマンス, 小規模ビジネス, シフト通知, シフトリマインダー"
+    />
+    <title>Shift Link | LINE連携シフト管理ツール</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS CDN -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <!-- AOS JavaScript CDN -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <!-- Google Material Icons CDN -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      /* Custom styles */
+      .shadow-custom {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      /* Smooth scroll */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 font-sans leading-relaxed tracking-wide">
+    <!-- Header Section -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow z-50">
+      <div
+        class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6"
+      >
+        <div class="flex items-center">
+          <h1 class="text-2xl font-bold text-gray-800">Shift Link</h1>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+          <a href="#about" class="text-gray-700 hover:text-blue-500 transition"
+            >About</a
+          >
+          <a
+            href="#features"
+            class="text-gray-700 hover:text-blue-500 transition"
+            >Features</a
+          >
+          <a
+            href="#pricing"
+            class="text-gray-700 hover:text-blue-500 transition"
+            >Pricing</a
+          >
+          <a href="#cases" class="text-gray-700 hover:text-blue-500 transition"
+            >Cases</a
+          >
+          <a href="#faq" class="text-gray-700 hover:text-blue-500 transition"
+            >FAQ</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-700 hover:text-blue-500 transition"
+            >Contact</a
+          >
+        </nav>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none">
+            <span class="material-icons">menu</span>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <a href="#about" class="block px-6 py-2 text-gray-700 hover:bg-gray-100"
+          >About</a
+        >
+        <a
+          href="#features"
+          class="block px-6 py-2 text-gray-700 hover:bg-gray-100"
+          >Features</a
+        >
+        <a
+          href="#pricing"
+          class="block px-6 py-2 text-gray-700 hover:bg-gray-100"
+          >Pricing</a
+        >
+        <a href="#cases" class="block px-6 py-2 text-gray-700 hover:bg-gray-100"
+          >Cases</a
+        >
+        <a href="#faq" class="block px-6 py-2 text-gray-700 hover:bg-gray-100"
+          >FAQ</a
+        >
+        <a
+          href="#contact"
+          class="block px-6 py-2 text-gray-700 hover:bg-gray-100"
+          >Contact</a
+        >
+      </div>
+    </header>
+    <!-- Spacer to prevent content being hidden behind fixed header -->
+    <div class="h-20"></div>
+    <!-- About Section -->
+    <section
+      id="about"
+      class="max-w-5xl mx-auto text-center py-12 px-4"
+      data-aos="fade-up"
+    >
+      <h2 class="text-3xl font-semibold text-gray-800">Shift Linkとは？</h2>
+      <p class="text-gray-600 mt-6">
+        Shift
+        Linkは、小規模ビジネスやチームのために開発された、LINE連携のシンプルなシフト管理ツールです。<br />
+        LINEから直接アクセスでき、操作が簡単で導入がスムーズ。<br />
+        スタッフもLINE上でシフトの確認・変更が可能なので、余計な手間や費用をかけずにシフト管理を効率化します。<br />
+        <br />
+        効率的なシフト管理により、業務の生産性向上とスタッフの満足度向上を実現します。<br />
+      </p>
+    </section>
+    <!-- Features Section -->
+    <section
+      id="features"
+      class="bg-white py-12 px-6 w-full"
+      data-aos="fade-up"
+    >
+      <h2 class="text-3xl font-semibold text-gray-800 text-center">
+        Shift Linkの特徴
+      </h2>
+      <div
+        class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8"
+      >
+        <div
+          class="p-6 bg-gray-100 rounded-lg shadow-custom"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+        >
+          <span class="material-icons text-blue-500 text-4xl">access_time</span>
+          <h3 class="text-xl font-semibold text-gray-700 mt-4">
+            LINEで簡単アクセス
+          </h3>
+          <p class="text-gray-600 mt-2">
+            余計なアプリは不要！LINEでシフトの確認やリクエストが可能。<br />
+            スマホから簡単に操作できます。<br />
+          </p>
+        </div>
+        <div
+          class="p-6 bg-gray-100 rounded-lg shadow-custom"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
+          <span class="material-icons text-blue-500 text-4xl"
+            >monetization_on</span
+          >
+          <h3 class="text-xl font-semibold text-gray-700 mt-4">
+            コストパフォーマンスの高さ
+          </h3>
+          <p class="text-gray-600 mt-2">
+            月額3,000円で10人まで利用可能。<br />
+            手軽にチーム全員で使えます。<br />
+          </p>
+        </div>
+        <div
+          class="p-6 bg-gray-100 rounded-lg shadow-custom"
+          data-aos="zoom-in"
+          data-aos-delay="300"
+        >
+          <span class="material-icons text-blue-500 text-4xl"
+            >notifications</span
+          >
+          <h3 class="text-xl font-semibold text-gray-700 mt-4">
+            シフト通知とリマインダー
+          </h3>
+          <p class="text-gray-600 mt-2">
+            月初のシフト通知、前日リマインダーでシフトの見落としを防止。<br />
+            急なシフト変更や急募もLINEで通知できます。<br />
+          </p>
+        </div>
+        <div
+          class="p-6 bg-gray-100 rounded-lg shadow-custom"
+          data-aos="zoom-in"
+          data-aos-delay="400"
+        >
+          <span class="material-icons text-blue-500 text-4xl">settings</span>
+          <h3 class="text-xl font-semibold text-gray-700 mt-4">
+            簡単な設定と使いやすい管理画面
+          </h3>
+          <p class="text-gray-600 mt-2">
+            管理者向けのシンプルな管理画面で、誰でもすぐに使い始めることができます。<br />
+          </p>
+        </div>
+        <div
+          class="p-6 bg-gray-100 rounded-lg shadow-custom"
+          data-aos="zoom-in"
+          data-aos-delay="500"
+        >
+          <span class="material-icons text-blue-500 text-4xl">sync</span>
+          <h3 class="text-xl font-semibold text-gray-700 mt-4">
+            柔軟なシフト変更
+          </h3>
+          <p class="text-gray-600 mt-2">
+            従業員がシフトを簡単に変更リクエストでき、管理者がLINE上で承認・拒否が可能。<br />
+          </p>
+        </div>
+        <div
+          class="p-6 bg-gray-100 rounded-lg shadow-custom"
+          data-aos="zoom-in"
+          data-aos-delay="600"
+        >
+          <span class="material-icons text-blue-500 text-4xl"
+            >notifications_active</span
+          >
+          <h3 class="text-xl font-semibold text-gray-700 mt-4">
+            リアルタイム通知
+          </h3>
+          <p class="text-gray-600 mt-2">
+            シフトの変更や急募が発生した際、即座にLINEで通知されます。<br />
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Detailed Features Section -->
+    <section
+      id="functions"
+      class="py-12 px-6 w-full bg-gray-50"
+      data-aos="fade-up"
+    >
+      <h2 class="text-3xl font-semibold text-gray-800 text-center">
+        主な機能一覧
+      </h2>
+      <div class="max-w-6xl mx-auto mt-8 space-y-8">
+        <!-- Feature 1 -->
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2" data-aos="fade-right">
+            <img
+              src="https://via.placeholder.com/400x300"
+              alt="シフト作成と一括通知"
+              class="rounded-lg shadow-lg"
+            />
+          </div>
+          <div class="md:w-1/2 mt-4 md:mt-0 md:pl-12" data-aos="fade-left">
+            <h3 class="text-2xl font-semibold text-gray-700">
+              シフト作成と一括通知
+            </h3>
+            <p class="text-gray-600 mt-2">
+              管理者がシフトを簡単に作成し、LINEを通じてスタッフ全員に一括で通知します。<br />
+              これにより、シフト作成の手間を大幅に削減できます。<br />
+              効率的なシフト管理により、業務の生産性向上とスタッフの満足度向上を実現します。<br />
+            </p>
+          </div>
+        </div>
+        <!-- Feature 2 -->
+        <div class="flex flex-col md:flex-row-reverse items-center">
+          <div class="md:w-1/2" data-aos="fade-left">
+            <img
+              src="https://via.placeholder.com/400x300"
+              alt="変更リクエスト・承認"
+              class="rounded-lg shadow-lg"
+            />
+          </div>
+          <div class="md:w-1/2 mt-4 md:mt-0 md:pr-12" data-aos="fade-right">
+            <h3 class="text-2xl font-semibold text-gray-700">
+              変更リクエスト・承認
+            </h3>
+            <p class="text-gray-600 mt-2">
+              スタッフがシフト変更をリクエストでき、管理者はLINE上で簡単に承認または拒否が可能です。<br />
+              リアルタイムでシフト調整が行えます。<br />
+              これにより、柔軟なシフト管理とスタッフのニーズに迅速に対応できます。<br />
+            </p>
+          </div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2" data-aos="fade-right">
+            <img
+              src="https://via.placeholder.com/400x300"
+              alt="リマインダーと急募通知"
+              class="rounded-lg shadow-lg"
+            />
+          </div>
+          <div class="md:w-1/2 mt-4 md:mt-0 md:pl-12" data-aos="fade-left">
+            <h3 class="text-2xl font-semibold text-gray-700">
+              リマインダーと急募通知
+            </h3>
+            <p class="text-gray-600 mt-2">
+              シフト前日にリマインダーを送信し、急な欠員が発生した際にはLINEで迅速に通知します。<br />
+              これにより、シフトの安定性を保ちます。<br />
+              効率的なコミュニケーションで、業務のスムーズな運営をサポートします。<br />
+            </p>
+          </div>
+        </div>
+        <!-- Feature 4 -->
+        <div class="flex flex-col md:flex-row-reverse items-center">
+          <div class="md:w-1/2" data-aos="fade-left">
+            <img
+              src="https://via.placeholder.com/400x300"
+              alt="詳細レポート作成"
+              class="rounded-lg shadow-lg"
+            />
+          </div>
+          <div class="md:w-1/2 mt-4 md:mt-0 md:pr-12" data-aos="fade-right">
+            <h3 class="text-2xl font-semibold text-gray-700">
+              詳細レポート作成
+            </h3>
+            <p class="text-gray-600 mt-2">
+              シフトデータを基にした詳細なレポートを自動生成。<br />
+              労働時間の管理やスタッフの稼働状況を一目で把握できます。<br />
+              データに基づいた経営判断をサポートし、ビジネスの効率化に貢献します。<br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Why Shift Link Section -->
+    <section id="why" class="bg-white py-12 px-6 w-full" data-aos="fade-up">
+      <h2 class="text-3xl font-semibold text-gray-800 text-center">
+        なぜShift Linkなのか？
+      </h2>
+      <div class="max-w-5xl mx-auto mt-8 grid md:grid-cols-2 gap-8">
+        <div data-aos="fade-right">
+          <h3 class="text-2xl font-semibold text-gray-700">
+            他のシフト管理ツールと比較して
+          </h3>
+          <ul class="mt-4 text-gray-600 list-disc list-inside">
+            <li>
+              低コストで高機能：月額3,000円から利用可能で、必要最低限の機能を網羅。<br />
+            </li>
+            <li>
+              LINE連携：普段から使用しているLINEを活用でき、追加アプリの導入が不要。<br />
+            </li>
+            <li>
+              直感的な操作性：シンプルな管理画面で、誰でもすぐに使いこなせます。<br />
+            </li>
+            <li>
+              柔軟な対応：小規模から中規模まで、様々なビジネスニーズに対応。<br />
+            </li>
+          </ul>
+        </div>
+        <div data-aos="fade-left">
+          <img
+            src="https://via.placeholder.com/500x300"
+            alt="他のツールとの比較"
+            class="rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Case Studies Section -->
+    <section id="cases" class="py-12 px-6 w-full bg-gray-50" data-aos="fade-up">
+      <h2 class="text-3xl font-semibold text-gray-800 text-center">導入事例</h2>
+      <div class="max-w-6xl mx-auto mt-8 grid md:grid-cols-2 gap-8">
+        <!-- Case Study 1 -->
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2" data-aos="fade-right">
+            <img
+              src="https://via.placeholder.com/400x300"
+              alt="飲食店導入事例"
+              class="rounded-lg shadow-lg"
+            />
+          </div>
+          <div class="md:w-1/2 mt-4 md:mt-0 md:pl-12" data-aos="fade-left">
+            <h3 class="text-2xl font-semibold text-gray-700">
+              飲食店「レストランA」
+            </h3>
+            <p class="text-gray-600 mt-2">
+              Shift
+              Linkを導入したことで、シフト管理がとてもスムーズになりました。<br />
+              LINEでの通知が便利で、スタッフからも好評です。<br />
+              シフト作成の時間が半分に削減され、スタッフのリクエスト対応も迅速に行えるようになりました。<br />
+            </p>
+          </div>
+        </div>
+        <!-- Case Study 2 -->
+        <div class="flex flex-col md:flex-row-reverse items-center">
+          <div class="md:w-1/2" data-aos="fade-left">
+            <img
+              src="https://via.placeholder.com/400x300"
+              alt="美容院導入事例"
+              class="rounded-lg shadow-lg"
+            />
+          </div>
+          <div class="md:w-1/2 mt-4 md:mt-0 md:pr-12" data-aos="fade-right">
+            <h3 class="text-2xl font-semibold text-gray-700">
+              美容院「サロンB」
+            </h3>
+            <p class="text-gray-600 mt-2">
+              小規模なサロン経営にぴったりのシフト管理ツールです。<br />
+              コストも低く、LINEでのやり取りがとても便利です。<br />
+              スタッフのシフト確認が簡単になり、急な欠員にも迅速に対応できるようになりました。<br />
+              顧客サービスの向上にも繋がりました。<br />
+            </p>
+          </div>
+        </div>
+        <!-- Case Study 3 -->
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2" data-aos="fade-right">
+            <img
+              src="https://via.placeholder.com/400x300"
+              alt="クリニック導入事例"
+              class="rounded-lg shadow-lg"
+            />
+          </div>
+          <div class="md:w-1/2 mt-4 md:mt-0 md:pl-12" data-aos="fade-left">
+            <h3 class="text-2xl font-semibold text-gray-700">
+              クリニック「クリニックC」
+            </h3>
+            <p class="text-gray-600 mt-2">
+              シフトの管理が効率化され、医師や看護師の労働時間管理も容易に。<br />
+              LINE通知で従業員全員が最新のシフト情報を常に把握できるようになりました。<br />
+              患者への対応力も向上し、クリニック全体の運営がスムーズになりました。<br />
+            </p>
+          </div>
+        </div>
+        <!-- Case Study 4 -->
+        <div class="flex flex-col md:flex-row-reverse items-center">
+          <div class="md:w-1/2" data-aos="fade-left">
+            <img
+              src="https://via.placeholder.com/400x300"
+              alt="小売店導入事例"
+              class="rounded-lg shadow-lg"
+            />
+          </div>
+          <div class="md:w-1/2 mt-4 md:mt-0 md:pr-12" data-aos="fade-right">
+            <h3 class="text-2xl font-semibold text-gray-700">
+              小売店「ショップD」
+            </h3>
+            <p class="text-gray-600 mt-2">
+              Shift
+              Linkの導入により、シフトの調整が迅速になり、スタッフの満足度も向上しました。<br />
+              LINE連携がとても便利で、日々のシフト管理が簡単に行えています。<br />
+              効率的なシフト管理で、売上の向上にも寄与しています。<br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Section -->
+    <section id="faq" class="bg-white py-12 px-6 w-full" data-aos="fade-up">
+      <h2 class="text-3xl font-semibold text-gray-800 text-center">
+        よくある質問
+      </h2>
+      <div class="max-w-5xl mx-auto mt-8 space-y-6">
+        <!-- FAQ 1 -->
+        <div class="border-b-2 border-gray-200 pb-4">
+          <h3 class="text-xl font-semibold text-gray-700">
+            Shift Linkはどのようなビジネスに最適ですか？
+          </h3>
+          <p class="text-gray-600 mt-2">
+            Shift
+            Linkは、小規模な飲食店、美容院、クリニック、サロンなど、シフト制勤務が多い事業者に最適です。<br />
+            シンプルで直感的な操作性と低コストが魅力です。<br />
+          </p>
+        </div>
+        <!-- FAQ 2 -->
+        <div class="border-b-2 border-gray-200 pb-4">
+          <h3 class="text-xl font-semibold text-gray-700">
+            無料トライアルはいつまで利用できますか？
+          </h3>
+          <p class="text-gray-600 mt-2">
+            無料トライアルは1ヶ月間利用可能です。<br />
+            トライアル期間中に全機能をお試しいただけます。<br />
+          </p>
+        </div>
+        <!-- FAQ 3 -->
+        <div class="border-b-2 border-gray-200 pb-4">
+          <h3 class="text-xl font-semibold text-gray-700">
+            LINE連携の設定は難しいですか？
+          </h3>
+          <p class="text-gray-600 mt-2">
+            いいえ、Shift Linkの導入は非常に簡単です。<br />
+            ガイドに従ってLINEアカウントと連携するだけで、すぐにシフト管理を開始できます。<br />
+          </p>
+        </div>
+        <!-- FAQ 4 -->
+        <div class="border-b-2 border-gray-200 pb-4">
+          <h3 class="text-xl font-semibold text-gray-700">
+            サポートはどのようになっていますか？
+          </h3>
+          <p class="text-gray-600 mt-2">
+            Shift Linkでは、メールやチャットによるサポートを提供しています。<br />
+            スタンダードプラン以上のお客様には、優先サポートもご用意しています。<br />
+          </p>
+        </div>
+        <!-- FAQ 5 -->
+        <div class="border-b-2 border-gray-200 pb-4">
+          <h3 class="text-xl font-semibold text-gray-700">
+            追加ユーザーの料金はいくらですか？
+          </h3>
+          <p class="text-gray-600 mt-2">
+            基本プランでは10ユーザーまで月額3,000円に含まれています。<br />
+            追加ユーザーは1人ごとに100円で追加可能です。<br />
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Implementation Steps Section -->
+    <section id="steps" class="py-12 px-6 w-full bg-gray-50" data-aos="fade-up">
+      <h2 class="text-3xl font-semibold text-gray-800 text-center">
+        導入までの流れ
+      </h2>
+      <div class="max-w-4xl mx-auto mt-8 space-y-8">
+        <!-- Step 1 -->
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/3" data-aos="fade-right">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Step 1"
+              class="rounded-full shadow-lg"
+            />
+          </div>
+          <div class="md:w-2/3 mt-4 md:mt-0 md:pl-12" data-aos="fade-left">
+            <h3 class="text-2xl font-semibold text-gray-700">
+              1. 無料トライアルにお申し込み
+            </h3>
+            <p class="text-gray-600 mt-2">
+              Shift
+              Linkの無料トライアルに登録し、1ヶ月間サービスを無料でお試しいただけます。<br />
+              実際の業務でどのようにShift Linkが役立つかを体験してください。<br />
+            </p>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="flex flex-col md:flex-row-reverse items-center">
+          <div class="md:w-1/3" data-aos="fade-left">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Step 2"
+              class="rounded-full shadow-lg"
+            />
+          </div>
+          <div class="md:w-2/3 mt-4 md:mt-0 md:pr-12" data-aos="fade-right">
+            <h3 class="text-2xl font-semibold text-gray-700">
+              2. シフト設定・LINE通知開始
+            </h3>
+            <p class="text-gray-600 mt-2">
+              管理画面でシフトを作成し、LINEを通じてスタッフに通知を開始します。<br />
+              簡単な操作で、すぐにシフト管理が始められます。<br />
+            </p>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/3" data-aos="fade-right">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Step 3"
+              class="rounded-full shadow-lg"
+            />
+          </div>
+          <div class="md:w-2/3 mt-4 md:mt-0 md:pl-12" data-aos="fade-left">
+            <h3 class="text-2xl font-semibold text-gray-700">
+              3. スタッフがLINEでシフト確認・変更リクエスト
+            </h3>
+            <p class="text-gray-600 mt-2">
+              スタッフはLINEからシフトを確認し、必要に応じて変更リクエストを送信します。<br />
+              管理者は簡単に承認・拒否が可能です。<br />
+              リアルタイムでのシフト調整が可能となり、業務の効率化が図れます。<br />
+            </p>
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="flex flex-col md:flex-row-reverse items-center">
+          <div class="md:w-1/3" data-aos="fade-left">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Step 4"
+              class="rounded-full shadow-lg"
+            />
+          </div>
+          <div class="md:w-2/3 mt-4 md:mt-0 md:pr-12" data-aos="fade-right">
+            <h3 class="text-2xl font-semibold text-gray-700">
+              4. 継続的なサポートと改善
+            </h3>
+            <p class="text-gray-600 mt-2">
+              利用者からのフィードバックを基に、機能の改善や新機能の追加を行います。<br />
+              常に最適なシフト管理を提供します。<br />
+              定期的なアップデートで、最新のニーズに対応します。<br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section
+      id="testimonials"
+      class="bg-white py-12 px-6 w-full"
+      data-aos="fade-up"
+    >
+      <h2 class="text-3xl font-semibold text-gray-800 text-center">
+        ユーザーレビュー
+      </h2>
+      <div class="max-w-5xl mx-auto mt-8 space-y-8">
+        <!-- Testimonial 1 -->
+        <div
+          class="p-6 bg-gray-100 rounded-lg shadow flex flex-col md:flex-row"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <!-- Left Side: Image, Name, Role -->
+          <div
+            class="md:w-1/3 flex flex-col items-center md:items-start mb-4 md:mb-0"
+          >
+            <img
+              src="https://via.placeholder.com/100"
+              alt="山田 太郎"
+              class="rounded-full mb-4"
+            />
+            <p class="text-gray-800 font-semibold">山田 太郎</p>
+            <p class="text-gray-600">飲食店オーナー</p>
+          </div>
+          <!-- Right Side: Review Content -->
+          <div class="md:w-2/3">
+            <p class="text-gray-700">
+              "Shift
+              Linkを導入してから、シフト管理がとてもスムーズになりました。<br />
+              LINEでの通知が便利で、スタッフからも好評です！"
+            </p>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div
+          class="p-6 bg-gray-100 rounded-lg shadow flex flex-col md:flex-row"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <!-- Left Side: Image, Name, Role -->
+          <div
+            class="md:w-1/3 flex flex-col items-center md:items-start mb-4 md:mb-0"
+          >
+            <img
+              src="https://via.placeholder.com/100"
+              alt="佐藤 花子"
+              class="rounded-full mb-4"
+            />
+            <p class="text-gray-800 font-semibold">佐藤 花子</p>
+            <p class="text-gray-600">美容院オーナー</p>
+          </div>
+          <!-- Right Side: Review Content -->
+          <div class="md:w-2/3">
+            <p class="text-gray-700">
+              "小規模なサロン経営にぴったりのシフト管理ツールです。<br />
+              コストも低く、LINEでのやり取りがとても便利です。<br />
+              "
+            </p>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div
+          class="p-6 bg-gray-100 rounded-lg shadow flex flex-col md:flex-row"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <!-- Left Side: Image, Name, Role -->
+          <div
+            class="md:w-1/3 flex flex-col items-center md:items-start mb-4 md:mb-0"
+          >
+            <img
+              src="https://via.placeholder.com/100"
+              alt="田中 一郎"
+              class="rounded-full mb-4"
+            />
+            <p class="text-gray-800 font-semibold">田中 一郎</p>
+            <p class="text-gray-600">クリニック管理者</p>
+          </div>
+          <!-- Right Side: Review Content -->
+          <div class="md:w-2/3">
+            <p class="text-gray-700">
+              "Shift
+              Linkのおかげで、シフトの調整が迅速になり、スタッフの満足度も向上しました。<br />
+              LINE連携がとても便利です。<br />
+              "
+            </p>
+          </div>
+        </div>
+        <!-- Testimonial 4 -->
+        <div
+          class="p-6 bg-gray-100 rounded-lg shadow flex flex-col md:flex-row"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <!-- Left Side: Image, Name, Role -->
+          <div
+            class="md:w-1/3 flex flex-col items-center md:items-start mb-4 md:mb-0"
+          >
+            <img
+              src="https://via.placeholder.com/100"
+              alt="鈴木 次郎"
+              class="rounded-full mb-4"
+            />
+            <p class="text-gray-800 font-semibold">鈴木 次郎</p>
+            <p class="text-gray-600">小売店オーナー</p>
+          </div>
+          <!-- Right Side: Review Content -->
+          <div class="md:w-2/3">
+            <p class="text-gray-700">
+              "初めてのシフト管理ツールでしたが、Shift
+              Linkはとても使いやすく、導入が簡単でした。<br />
+              コストパフォーマンスも抜群です。<br />
+              "
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Why Choose Shift Link Section -->
+    <section
+      id="why-choose"
+      class="py-12 px-6 w-full bg-white"
+      data-aos="fade-up"
+    >
+      <h2 class="text-3xl font-semibold text-gray-800 text-center">
+        Shift Linkを選ぶ理由
+      </h2>
+      <div class="max-w-6xl mx-auto mt-8 grid md:grid-cols-3 gap-8">
+        <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
+          <span class="material-icons text-blue-500 text-4xl">verified</span>
+          <h3 class="text-xl font-semibold text-gray-700 mt-4">高い信頼性</h3>
+          <p class="text-gray-600 mt-2">
+            LINEの信頼性とセキュリティを活用し、安全にシフト管理が行えます。<br />
+          </p>
+        </div>
+        <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
+          <span class="material-icons text-blue-500 text-4xl">thumb_up</span>
+          <h3 class="text-xl font-semibold text-gray-700 mt-4">簡単操作</h3>
+          <p class="text-gray-600 mt-2">
+            直感的なインターフェースで、誰でもすぐに使い始めることができます。<br />
+          </p>
+        </div>
+        <div class="text-center" data-aos="zoom-in" data-aos-delay="300">
+          <span class="material-icons text-blue-500 text-4xl"
+            >attach_money</span
+          >
+          <h3 class="text-xl font-semibold text-gray-700 mt-4">柔軟なプラン</h3>
+          <p class="text-gray-600 mt-2">
+            ビジネスの規模やニーズに合わせて、最適なプランを選択できます。<br />
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Additional Features Section -->
+    <section
+      id="additional-features"
+      class="bg-gray-50 py-12 px-6 w-full"
+      data-aos="fade-up"
+    >
+      <h2 class="text-3xl font-semibold text-gray-800 text-center">追加機能</h2>
+      <div class="max-w-6xl mx-auto mt-8 grid md:grid-cols-2 gap-8">
+        <div data-aos="fade-right">
+          <h3 class="text-2xl font-semibold text-gray-700">カスタム通知設定</h3>
+          <p class="text-gray-600 mt-2">
+            シフト通知やリマインダーのタイミングをカスタマイズ可能。<br />
+            ビジネスのニーズに合わせて最適な通知を設定できます。<br />
+          </p>
+        </div>
+        <div data-aos="fade-left">
+          <h3 class="text-2xl font-semibold text-gray-700">統計レポート</h3>
+          <p class="text-gray-600 mt-2">
+            シフトの稼働状況や労働時間を視覚的に分析。<br />
+            データに基づいた経営判断が可能になります。<br />
+          </p>
+        </div>
+        <div data-aos="fade-right">
+          <h3 class="text-2xl font-semibold text-gray-700">多言語対応</h3>
+          <p class="text-gray-600 mt-2">
+            多言語に対応しており、外国人スタッフもスムーズにシフト管理が行えます。<br />
+          </p>
+        </div>
+        <div data-aos="fade-left">
+          <h3 class="text-2xl font-semibold text-gray-700">モバイル対応</h3>
+          <p class="text-gray-600 mt-2">
+            スマートフォンからも快適にシフト管理ができるレスポンシブデザイン。<br />
+            どこからでもアクセス可能です。<br />
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 px-6 w-full bg-white" data-aos="fade-up">
+      <h2 class="text-3xl font-semibold text-gray-800 text-center">
+        お問い合わせ
+      </h2>
+      <div class="max-w-4xl mx-auto mt-8">
+        <form
+          class="bg-gray-100 p-8 rounded-lg shadow-lg"
+          action="#"
+          method="POST"
+        >
+          <div class="mb-4">
+            <label for="name" class="block text-gray-700 font-semibold mb-2"
+              >お名前</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700 font-semibold mb-2"
+              >メールアドレス</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-gray-700 font-semibold mb-2"
+              >お問い合わせ内容</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-blue-500 text-white py-3 px-6 rounded-lg shadow hover:bg-blue-600 transition"
+          >
+            送信する
+          </button>
+        </form>
+      </div>
+    </section>
+    <!-- Call to Action Section -->
+    <section
+      id="cta"
+      class="text-center py-12 px-4 bg-blue-500 w-full text-white"
+      data-aos="fade-up"
+    >
+      <h2 class="text-3xl font-semibold">今すぐShift Linkを試してみよう！</h2>
+      <p class="text-lg mt-4">
+        シフト管理を簡単に、スマートに。<br />
+        1ヶ月の無料トライアルでShift Linkの便利さを体験してください。<br />
+      </p>
+      <a
+        href="#contact"
+        class="mt-6 inline-block bg-white text-blue-500 py-3 px-8 rounded-lg shadow hover:bg-gray-100 transition"
+        >無料トライアルを始める</a
+      >
+    </section>
+    <!-- Footer Section -->
+    <footer class="text-center text-gray-500 py-8 w-full bg-white shadow-inner">
+      <p>&copy; 2024 Shift Link. All rights reserved.</p>
+      <div class="mt-4">
+        <a href="#" class="mx-2 hover:text-gray-700">利用規約</a>
+        <a href="#" class="mx-2 hover:text-gray-700">プライバシーポリシー</a>
+        <a href="#contact" class="mx-2 hover:text-gray-700">お問い合わせ</a>
+      </div>
+    </footer>
+    <!-- AOS Initialization -->
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+      // Mobile Menu Toggle
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
